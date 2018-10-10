@@ -1,0 +1,30 @@
+Komputer składa się z wielu komponentów, na potrzeby zadania zakładamy, że
+minimum potrzebne do działania to:
+
+procesor (taktowanie, np. 3000MHz, zakładana temperatura przy takim taktowaniu i
+maksymalna bezpieczna temperatura)
+pamięć ram (ilość pamięci i taktowanie, np. 4096MB 1066MHz, zakładana temperatura
+przy takim taktowaniu i maksymalna bezpieczna temperatura)
+dysk twardy (pojemność, np. 128GB)
+Każdy z powyższych elementów posiada też nazwę modelu, producenta i numer seryjny.
+
+Procesor i pamięci ram można dodatkowo podkręcać, co oznacza, że można zwiększać
+ich taktowanie (przykładowo jeśli nasz procesor miał taktowanie zegara na poziomie
+2500MHz, to można go zwiększyć np. do 2800MHz). Analogicznie przy pamięciach ram.
+
+Zakładana temperatura procesora wzrasta o 10 stopni na każde 100MHz taktowania, a
+pamięci ram o 15 stopni na każde 100MHz więcej.
+
+Problem polega na tym, że jeśli zbyt mocno podkręcimy procesor lub pamięci ram, to
+zbyt wysoka temperatura spowodowałaby ich spalenie.
+
+Z tego powodu komponenty te posiadają zabezpieczenie przed przegrzaniem. Jeśli
+spróbujemy podkręcić dany komponent do takiego poziomu, że maksymalna temperatura
+zostałaby przekroczona, to nie powinno się to udać (wyświetlamy ostrzeżenie).
+
+Napisz program, który zasymuluje powyższy scenariusz. Utwórz przykładowy komputer,
+spróbuj podkręcić jego wybrane komponenty do nieprawidłowego stanu. Samodzielnie
+zaproponuj hierarchię klas i dziedziczenia, użyj też co najmniej jednego typu
+abstrakcyjnego. W programie wykorzystaj wyjątki tam gdzie to uzasadnione, możesz
+zaproponować dodatkowe elementy wykraczające poza treść zadania.
+

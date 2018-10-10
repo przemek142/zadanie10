@@ -1,0 +1,14 @@
+Stwórz plik produkty.csv, a w nim zapisz kilka informacji o produktach w formacie:
+
+nazwa1;producent1;cena1
+nazwa2;producent2;cena2
+itd.
+
+Napisz program, w którym wczytasz informacje o produktach do tablicy
+typu Product[]. Następnie zdefiniuj metody, które obliczą i zwrócą:
+
+sumę cen wszystkich produktów
+najdroższy produkt
+*dodatkowe – zwracającą nazwę producenta, którego produktów
+najwięcej znajdowało się w pliku.
+Przetestuj działanie każdej z metod.
