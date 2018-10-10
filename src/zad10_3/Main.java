@@ -17,7 +17,7 @@ public class Main {
             System.out.println("Zła nazwa pliku");
         }
         Product[] products = new Product[10];
-        while (scanner != null && scanner.hasNext() && i <= 10) {
+        while (scanner != null && scanner.hasNext() && i <= products.length) {
             temp = scanner.nextLine().split(";");
             products[i] = new Product(temp[0], temp[1], Double.parseDouble(temp[2]));
             i++;
