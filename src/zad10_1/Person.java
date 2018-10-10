@@ -8,10 +8,16 @@ public class Person {
     private int pesel, age;
 
     public Person(String firstName, String lastName, int pesel, int age) {
-        setFirstName(firstName);
-        setLastName(lastName);
+        try {
+            setFirstName(firstName);
+            setLastName(lastName);
+            setAge(age);
+        } catch (NameUndefinedException e) {
+            System.out.println("Names must be longer than 2 characters.");
+        } catch (IncorrectAgeException e) {
+            System.out.println("Age must be greater then 0");
+        }
         this.pesel = pesel;
-        setAge(age);
     }
 
     @Override
@@ -39,7 +45,7 @@ public class Person {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public void setFirstName(String firstName) throws NameUndefinedException {
         if (firstName.length() >= 2)
             this.firstName = firstName;
         else
@@ -50,9 +56,9 @@ public class Person {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
-        if (firstName.length() >= 2)
-            this.firstName = firstName;
+    public void setLastName(String lastName) throws NameUndefinedException {
+        if (lastName.length() >= 2)
+            this.lastName = lastName;
         else
             throw new NameUndefinedException();
     }
@@ -69,7 +75,7 @@ public class Person {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(int age) throws IncorrectAgeException {
         if (age >= 1)
             this.age = age;
         else
