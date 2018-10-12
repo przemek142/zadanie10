@@ -13,9 +13,11 @@ public class Person {
             setLastName(lastName);
             setAge(age);
         } catch (NameUndefinedException e) {
-            System.out.println("Names must be longer than 2 characters.");
+            System.out.println("Names must be longer than 2 characters. \n" + e);
+            throw new ObjectCreationExeption("names");
         } catch (IncorrectAgeException e) {
             System.out.println("Age must be greater then 0");
+            throw new ObjectCreationExeption("age");
         }
         this.pesel = pesel;
     }
@@ -49,7 +51,7 @@ public class Person {
         if (firstName.length() >= 2)
             this.firstName = firstName;
         else
-            throw new NameUndefinedException();
+            throw new NameUndefinedException("first name");
     }
 
     public String getLastName() {
@@ -60,7 +62,7 @@ public class Person {
         if (lastName.length() >= 2)
             this.lastName = lastName;
         else
-            throw new NameUndefinedException();
+            throw new NameUndefinedException("last name");
     }
 
     public int getPesel() {
